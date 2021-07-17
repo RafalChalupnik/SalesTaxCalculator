@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     var beforeTaxPrice : Float = 0
     var salesTaxRate : Float = 0
     
+    @IBOutlet weak var afterTaxPriceTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -33,6 +35,14 @@ class ViewController: UIViewController {
         } else {
             salesTaxRate = 0
         }
+    }
+    
+    @IBAction func calculateButtonPressed(_ sender: Any) {
+        
+        let salesTax = beforeTaxPrice * salesTaxRate / 100
+        let afterTaxPrice = beforeTaxPrice + salesTax
+        
+        afterTaxPriceTextField.text = String(afterTaxPrice)
     }
 }
 

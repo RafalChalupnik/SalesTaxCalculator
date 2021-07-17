@@ -64,6 +64,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qN-VV-eBr">
                                 <rect key="frame" x="175" y="282.5" width="64" height="30"/>
                                 <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dk6-lD-3RN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -94,6 +97,9 @@
                             <constraint firstItem="8sD-oe-q2X" firstAttribute="centerY" secondItem="hJa-Vy-kd5" secondAttribute="centerY" id="zJA-k8-9kw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="afterTaxPriceTextField" destination="MGZ-zV-RFk" id="Up4-Rb-5Lh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
